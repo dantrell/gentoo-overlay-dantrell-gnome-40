@@ -1,0 +1,26 @@
+From bb7c28e41c5ba12781eb169e5379ca62d171b3d9 Mon Sep 17 00:00:00 2001
+From: Rafael Fontenelle <rffontenelle@gmail.com>
+Date: Sat, 10 Jul 2021 21:41:43 +0000
+Subject: [PATCH] Help: fix image installation
+
+Update filename in meson.build to fix regression by d987e798
+---
+ help/meson.build | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/help/meson.build b/help/meson.build
+index 3656aa2..3f58676 100644
+--- a/help/meson.build
++++ b/help/meson.build
+@@ -15,7 +15,7 @@ help_sources = [
+ ]
+ 
+ help_media = [
+-  'figures/gnome-chess-3-32.png',
++  'figures/gnome-chess-40.png',
+   'figures/org.gnome.Chess.svg',
+ ]
+ 
+-- 
+GitLab
+

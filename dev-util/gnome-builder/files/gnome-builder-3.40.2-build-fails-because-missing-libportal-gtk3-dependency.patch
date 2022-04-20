@@ -1,0 +1,36 @@
+diff '--exclude=.git' -urN a/meson.build b/meson.build
+--- a/meson.build	2021-05-05 15:59:41.000000000 -0500
++++ b/meson.build	2022-04-09 11:52:52.327572207 -0500
+@@ -265,7 +265,7 @@
+ libm_dep = cc.find_library('m', required: false)
+ libpangoft2_dep = dependency('pangoft2', version: '>= 1.38.0')
+ libpeas_dep = dependency('libpeas-1.0', version: '>= 1.22.0')
+-libportal_dep = dependency('libportal', version: '>= 0.3', required: false)
++libportal_dep = dependency('libportal-gtk3', version: '>= 0.3', required: false)
+ libtemplate_glib_dep = dependency('template-glib-1.0', version: '>= 3.28.0')
+ libvte_dep = dependency('vte-2.91', version: '>= 0.40.2')
+ libwebkit_dep = dependency('webkit2gtk-4.0', version: '>= 2.26', required: false)
+diff '--exclude=.git' -urN a/src/gstyle/gstyle-color-panel.c b/src/gstyle/gstyle-color-panel.c
+--- a/src/gstyle/gstyle-color-panel.c	2021-05-05 15:59:41.000000000 -0500
++++ b/src/gstyle/gstyle-color-panel.c	2022-04-09 11:52:09.996731835 -0500
+@@ -30,7 +30,7 @@
+ #include "gstyle-color.h"
+ 
+ #include <libportal/portal.h>
+-#include <libportal/portal-gtk3.h>
++#include <libportal-gtk3/portal-gtk3.h>
+ 
+ #define HSV_TO_SCALE_FACTOR (1.0 / 256.0)
+ #define CIELAB_L_TO_SCALE_FACTOR (100.0 / 256.0)
+diff '--exclude=.git' -urN a/src/plugins/project-tree/gbp-project-tree-pane-actions.c b/src/plugins/project-tree/gbp-project-tree-pane-actions.c
+--- a/src/plugins/project-tree/gbp-project-tree-pane-actions.c	2021-05-05 15:59:41.000000000 -0500
++++ b/src/plugins/project-tree/gbp-project-tree-pane-actions.c	2022-04-09 11:52:09.996731835 -0500
+@@ -27,7 +27,7 @@
+ #include <vte/vte.h>
+ 
+ #ifdef ENABLE_LIBPORTAL
+-# include <libportal/portal-gtk3.h>
++# include <libportal-gtk3/portal-gtk3.h>
+ #endif
+ 
+ #include "gbp-project-tree-private.h"
