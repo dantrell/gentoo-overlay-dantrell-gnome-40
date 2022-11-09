@@ -7,7 +7,7 @@ VALA_MIN_API_VERSION="0.52"
 inherit gnome.org gnome2-utils meson python-any-r1 vala xdg
 
 DESCRIPTION="Play the classic two-player boardgame of chess"
-HOMEPAGE="https://wiki.gnome.org/Apps/Chess"
+HOMEPAGE="https://wiki.gnome.org/Apps/Chess https://gitlab.gnome.org/GNOME/gnome-chess"
 
 LICENSE="GPL-3+"
 SLOT="0"

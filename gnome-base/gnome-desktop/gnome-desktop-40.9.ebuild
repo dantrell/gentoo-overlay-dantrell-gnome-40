@@ -5,7 +5,7 @@ EAPI="8"
 inherit gnome.org meson xdg
 
 DESCRIPTION="Library with common API for various GNOME modules"
-HOMEPAGE="https://gitlab.gnome.org/GNOME/gnome-desktop/"
+HOMEPAGE="https://gitlab.gnome.org/GNOME/gnome-desktop"
 
 LICENSE="GPL-2+ LGPL-2+ FDL-1.1+"
 SLOT="3/19" # subslot = libgnome-desktop-3 soname version

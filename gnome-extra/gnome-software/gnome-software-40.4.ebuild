@@ -5,7 +5,7 @@ EAPI="7"
 inherit gnome.org gnome2-utils meson xdg
 
 DESCRIPTION="Gnome install & update software"
-HOMEPAGE="https://wiki.gnome.org/Apps/Software"
+HOMEPAGE="https://wiki.gnome.org/Apps/Software https://gitlab.gnome.org/GNOME/gnome-software"
 
 LICENSE="GPL-2+"
 SLOT="0"

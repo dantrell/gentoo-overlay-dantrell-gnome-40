@@ -5,7 +5,7 @@ EAPI="7"
 inherit gnome.org gnome2-utils meson udev virtualx xdg
 
 DESCRIPTION="GNOME compositing window manager based on Clutter"
-HOMEPAGE="https://gitlab.gnome.org/GNOME/mutter/"
+HOMEPAGE="https://gitlab.gnome.org/GNOME/mutter"
 
 LICENSE="GPL-2+"
 SLOT="0/8" # 0/libmutter_api_version - ONLY gnome-shell (or anything using mutter-clutter-<api_version>.pc) should use the subslot

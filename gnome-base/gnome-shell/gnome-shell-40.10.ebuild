@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python{3_8,3_9,3_10,3_11} )
 inherit gnome.org gnome2-utils meson python-single-r1 virtualx xdg
 
 DESCRIPTION="Provides core UI functions for the GNOME desktop"
-HOMEPAGE="https://wiki.gnome.org/Projects/GnomeShell"
+HOMEPAGE="https://wiki.gnome.org/Projects/GnomeShell https://gitlab.gnome.org/GNOME/gnome-shell"
 
 LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
@@ -21,7 +21,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}
 #  * gstreamer/pipewire support is currently automagic
 DEPEND="
 	>=gnome-extra/evolution-data-server-3.33.1:=
-	>=app-crypt/gcr-3.7.5[introspection]
+	>=app-crypt/gcr-3.7.5:0=[introspection]
 	>=dev-libs/glib-2.68:2
 	>=dev-libs/gobject-introspection-1.49.1:=
 	>=dev-libs/gjs-1.65.1

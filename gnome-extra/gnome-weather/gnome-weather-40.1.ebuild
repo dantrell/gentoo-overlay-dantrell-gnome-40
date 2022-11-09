@@ -17,7 +17,7 @@ DEPEND="
 	>=x11-libs/gtk+-3.20:3
 	>=dev-libs/gjs-1.50
 	>=app-misc/geoclue-2.3.1:2.0
-	>=dev-libs/libgweather-40.0:=
+	>=dev-libs/libgweather-40.0:2=
 	>=gui-libs/libhandy-1.1.90:1=
 "
 RDEPEND="${DEPEND}

@@ -5,7 +5,7 @@ EAPI="8"
 inherit cmake gnome2 flag-o-matic readme.gentoo-r1
 
 DESCRIPTION="Integrated mail, addressbook and calendaring functionality"
-HOMEPAGE="https://wiki.gnome.org/Apps/Evolution"
+HOMEPAGE="https://wiki.gnome.org/Apps/Evolution https://gitlab.gnome.org/GNOME/evolution"
 
 # Note: explicitly "|| ( LGPL-2 LGPL-3 )", not "LGPL-2+".
 LICENSE="|| ( LGPL-2 LGPL-3 ) CC-BY-SA-3.0 FDL-1.3+ OPENLDAP"
@@ -21,7 +21,7 @@ IUSE="archive +bogofilter geolocation gtk-doc highlight ldap spamassassin spell 
 # automagic libunity dep
 # >=gspell-1.8 to ensure it uses enchant:2 like webkit-gtk
 DEPEND="
-	>=app-crypt/gcr-3.4:=[gtk]
+	>=app-crypt/gcr-3.4:0=[gtk]
 	>=app-text/enchant-2.2.0:2
 	>=dev-libs/glib-2.56:2[dbus]
 	>=dev-libs/libxml2-2.7.3:2
@@ -49,7 +49,7 @@ DEPEND="
 		>=media-libs/libchamplain-0.12:0.12[gtk]
 		>=media-libs/clutter-1.0.0:1.0
 		>=media-libs/clutter-gtk-0.90:1.0
-		>=sci-geosciences/geocode-glib-3.10.0 )
+		>=sci-geosciences/geocode-glib-3.10.0:0 )
 	ldap? ( >=net-nds/openldap-2:= )
 	spamassassin? ( mail-filter/spamassassin )
 	spell? ( >=app-text/gspell-1.8:= )

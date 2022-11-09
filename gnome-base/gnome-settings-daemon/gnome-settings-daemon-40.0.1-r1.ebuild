@@ -22,7 +22,7 @@ REQUIRED_USE="
 RESTRICT="!test? ( test )"
 
 DEPEND="
-	>=sci-geosciences/geocode-glib-3.10
+	>=sci-geosciences/geocode-glib-3.10:0
 	>=dev-libs/glib-2.56:2
 	>=gnome-base/gnome-desktop-3.37.1:3=
 	>=gnome-base/gsettings-desktop-schemas-40
@@ -49,7 +49,7 @@ DEPEND="
 	smartcard? ( >=dev-libs/nss-3.11.2 )
 	cups? ( >=net-print/cups-1.4[dbus] )
 	modemmanager? (
-		>=app-crypt/gcr-3.7.5:=
+		>=app-crypt/gcr-3.7.5:0=
 		>=net-misc/modemmanager-1.0:=
 	)
 	networkmanager? ( >=net-misc/networkmanager-1.0:= )
@@ -98,8 +98,8 @@ PATCHES=(
 
 python_check_deps() {
 	if use test; then
-		has_version "dev-python/pygobject:3[${PYTHON_USEDEP}]" &&
-		has_version "dev-python/python-dbusmock[${PYTHON_USEDEP}]"
+		python_has_version "dev-python/pygobject:3[${PYTHON_USEDEP}]" &&
+		python_has_version "dev-python/python-dbusmock[${PYTHON_USEDEP}]"
 	fi
 }
 

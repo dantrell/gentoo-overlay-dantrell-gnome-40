@@ -5,14 +5,14 @@ EAPI="8"
 inherit cmake db-use flag-o-matic gnome2 vala virtualx
 
 DESCRIPTION="Evolution groupware backend"
-HOMEPAGE="https://wiki.gnome.org/Apps/Evolution"
+HOMEPAGE="https://wiki.gnome.org/Apps/Evolution https://gitlab.gnome.org/GNOME/evolution-data-server"
 
 # Note: explicitly "|| ( LGPL-2 LGPL-3 )", not "LGPL-2+".
 LICENSE="|| ( LGPL-2 LGPL-3 ) BSD Sleepycat"
 SLOT="0/62-26-20" # subslot = libcamel-1.2/libedataserver-1.2/libebook-1.2.so soname version
 KEYWORDS="*"
 
-IUSE="berkdb +gnome-online-accounts +gtk gtk-doc +introspection ipv6 ldap kerberos oauth vala +weather"
+IUSE="berkdb +gnome-online-accounts +gtk gtk-doc +introspection ldap kerberos oauth vala +weather"
 REQUIRED_USE="vala? ( introspection )"
 
 # Some tests fail due to missing locales.
@@ -24,7 +24,7 @@ RESTRICT="test !test? ( test )"
 # berkdb needed only for migrating old addressbook data from <3.13 versions, bug #519512
 gdata_depend=">=dev-libs/libgdata-0.17.7:="
 RDEPEND="
-	>=app-crypt/gcr-3.4
+	>=app-crypt/gcr-3.4:0=
 	>=app-crypt/libsecret-0.5[crypt]
 	>=dev-db/sqlite-3.7.17:=
 	>=dev-libs/glib-2.46:2
@@ -40,7 +40,7 @@ RDEPEND="
 
 	berkdb? ( >=sys-libs/db-4:= )
 	gtk? (
-		>=app-crypt/gcr-3.4[gtk]
+		>=app-crypt/gcr-3.4:0=[gtk]
 		>=x11-libs/gtk+-3.16:3
 		>=media-libs/libcanberra-0.25[gtk3]
 	)
@@ -121,7 +121,7 @@ src_configure() {
 		-DENABLE_GOA=$(usex gnome-online-accounts)
 		-DWITH_LIBDB=$(usex berkdb "${EPREFIX}"/usr OFF)
 		# ENABLE_BACKTRACES requires libdwarf ?
-		-DENABLE_IPV6=$(usex ipv6)
+		-DENABLE_IPV6=ON
 		-DENABLE_WEATHER=$(usex weather)
 		-DENABLE_GOOGLE=${google_enable}
 		-DENABLE_LARGEFILE=ON
