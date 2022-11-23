@@ -23,7 +23,8 @@ DEPEND="
 	>=dev-libs/gobject-introspection-1.54:=
 	>=x11-libs/gtk+-3.22.0:3[introspection]
 	>=x11-libs/gtksourceview-4.0.2:4[introspection]
-	gui-libs/tepl:6
+	<gui-libs/tepl-6.2.0:6
+	>=gui-libs/tepl-5.99.0:6
 
 	spell? ( >=app-text/gspell-0.2.5:0= )
 	python? (
