@@ -1,0 +1,10 @@
+diff '--exclude=.git' -urN a/data/61-gdm.rules.in b/data/61-gdm.rules.in
+--- a/data/61-gdm.rules.in	2021-07-23 10:16:15.000000000 -0500
++++ b/data/61-gdm.rules.in	2023-01-12 11:30:46.641439443 -0600
+@@ -1,6 +1,4 @@
+ # disable Wayland on Hi1710 chipsets
+ ATTR{vendor}=="0x19e5", ATTR{device}=="0x1711", RUN+="@libexecdir@/gdm-runtime-config set daemon WaylandEnable false"
+-# disable Wayland when using the proprietary nvidia driver
+-DRIVER=="nvidia", RUN+="@libexecdir@/gdm-runtime-config set daemon WaylandEnable false"
+ # disable Wayland if modesetting is disabled
+ IMPORT{cmdline}="nomodeset", RUN+="@libexecdir@/gdm-runtime-config set daemon WaylandEnable false"
