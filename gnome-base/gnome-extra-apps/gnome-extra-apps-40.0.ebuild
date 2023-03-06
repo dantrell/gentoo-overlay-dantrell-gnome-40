@@ -9,7 +9,7 @@ LICENSE="metapackage"
 SLOT="3.0"
 KEYWORDS="*"
 
-IUSE="anjuta +bijiben boxes builder california +celluloid +dino empathy epiphany +evolution flashback +foliate +fonts +games geary gnote latexila multiwriter +recipes +share +shotwell simple-scan +todo +tracker +usage"
+IUSE="anjuta +bijiben boxes builder california +celluloid +dino empathy epiphany +evolution flashback +foliate +fonts +games gconf geary +ghex gnote gpaste latexila multiwriter +plots +polari +recipes +share +shotwell simple-scan software +todo +tracker +usage"
 
 # Cantarell doesn't provide support for modern emojis so we pair it with Noto,.Symbola, and Unifont:
 #
@@ -21,7 +21,6 @@ RDEPEND="
 	>=app-arch/file-roller-3.40.0
 	>=app-dicts/gnome-dictionary-${PV}
 	>=gnome-base/dconf-editor-3.38.0
-	>=gnome-extra/gconf-editor-3
 	>=gnome-extra/gnome-calculator-${PV}
 	>=gnome-extra/gnome-calendar-${PV}
 	>=gnome-extra/gnome-characters-${PV}
@@ -84,18 +83,25 @@ RDEPEND="
 		>=games-puzzle/lightsoff-${PV}
 		>=games-puzzle/quadrapassel-${PV}
 		>=games-puzzle/swell-foop-${PV} )
+	gconf? ( >=gnome-extra/gconf-editor-3 )
 	geary? ( >=mail-client/geary-0.12.4 )
+	ghex? ( >=app-editors/ghex-3.18.4 )
 	gnote? ( >=app-misc/gnote-${PV} )
+	gpaste? ( >=x11-misc/gpaste-${PV} )
 	latexila? ( >=app-editors/gnome-latex-3.38.0 )
 	multiwriter? ( >=gnome-extra/gnome-multi-writer-3.32.0 )
+	plots? ( >=sci-visualization/plots-0.7.0 )
+	polari? ( >=net-irc/polari-${PV} )
 	recipes? ( >=gnome-extra/gnome-recipes-1.6.2 )
 	share? ( >=gnome-extra/gnome-user-share-3.34.0 )
 	shotwell? ( >=media-gfx/shotwell-0.24 )
 	simple-scan? ( >=media-gfx/simple-scan-${PV} )
+	software? ( >=gnome-extra/gnome-software-${PV} )
 	todo? ( >=app-office/gnome-todo-${PV} )
 	tracker? (
 		>=app-misc/tracker-3:3=
 		>=app-misc/tracker-miners-3:3=
+		>=gnome-extra/gnome-books-${PV}
 		>=gnome-extra/gnome-documents-3.33.0
 		>=media-gfx/gnome-photos-${PV}
 		>=media-sound/gnome-music-${PV} )

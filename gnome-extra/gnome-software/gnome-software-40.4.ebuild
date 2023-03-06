@@ -4,14 +4,14 @@ EAPI="7"
 
 inherit gnome.org gnome2-utils meson xdg
 
-DESCRIPTION="Gnome install & update software"
+DESCRIPTION="GNOME utility for installing applications and updating systems"
 HOMEPAGE="https://wiki.gnome.org/Apps/Software https://gitlab.gnome.org/GNOME/gnome-software"
 
 LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="*"
 
-IUSE="flatpak +firmware gnome gtk-doc spell sysprof udev"
+IUSE="flatpak firmware gnome gtk-doc spell sysprof udev"
 
 RESTRICT="test" # writes to and deletes files in /var/tmp/self-test/
 
