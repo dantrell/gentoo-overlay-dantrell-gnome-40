@@ -1,7 +1,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
-PYTHON_COMPAT=( python{3_9,3_10,3_11} )
+PYTHON_COMPAT=( python{3_10,3_11,3_12,3_13} )
 DISABLE_AUTOFORMATTING=1
 FORCE_PRINT_ELOG=1
 
@@ -57,7 +57,7 @@ RDEPEND="
 		>=dev-python/pygobject-3.22.0:3[${PYTHON_USEDEP}]
 	')
 	${PYTHON_DEPS}
-	clang? ( sys-devel/clang:= )
+	clang? ( llvm-core/clang:= )
 	devhelp? ( >=dev-util/devhelp-3.25.1:= )
 	glade? ( >=dev-util/glade-3.22.0:3.10= )
 	spell? ( >=app-text/gspell-1.8:0=
@@ -80,7 +80,7 @@ BDEPEND="
 		dev-libs/appstream-glib
 		sys-apps/dbus )
 	dev-util/desktop-file-utils
-	>=dev-util/meson-0.49.2
+	>=dev-build/meson-0.49.2
 	>=sys-devel/gettext-0.19.8
 	virtual/pkgconfig
 "
@@ -96,10 +96,10 @@ that are currently available with packages include:
   highlighting and symbol resolving support.
 * dev-python/jedi and dev-python/lxml for more accurate Python
   autocompletion support.
-* dev-util/valgrind for integration with valgrind.
-* dev-util/meson for integration with the Meson build system.
+* dev-debug/valgrind for integration with valgrind.
+* dev-build/meson for integration with the Meson build system.
 * dev-util/cargo for integration with the Rust Cargo build system.
-* dev-util/cmake for integration with the CMake build system.
+* dev-build/cmake for integration with the CMake build system.
 * net-libs/nodejs[npm] for integration with the NPM package system.
 '
 # FIXME: Package codespell and mention here
@@ -120,7 +120,7 @@ PATCHES=(
 )
 
 llvm_check_deps() {
-	has_version "sys-devel/clang:${LLVM_SLOT}"
+	has_version "llvm-core/clang:${LLVM_SLOT}"
 }
 
 pkg_setup() {

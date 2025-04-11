@@ -118,7 +118,7 @@ src_prepare() {
 		eapply "${FILESDIR}"/${PN}-3.30.0-prioritize-xorg.patch
 	else
 		# From GNOME:
-		# 	https://gitlab.gnome.org/GNOME/gdm/commit/5cd78602d3d4c8355869151875fc317e8bcd5f08
+		# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/5cd78602d3d4c8355869151875fc317e8bcd5f08
 		eapply "${FILESDIR}"/${PN}-40.1-data-disable-wayland-for-proprietary-nvidia-machines.patch
 	fi
 
@@ -127,21 +127,21 @@ src_prepare() {
 	eapply -R "${FILESDIR}"/${PN}-40.1-libgdm-sort-session-list.patch
 
 	# From GNOME (wait for main DRM device before starting GDM):
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/04853a3b8c17712cc7f74c3c405ef47af53151c1
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/ae81d9bdd1e378598cf805c84af4313f8e10b3ed
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/2a871da666afd3a5312e061b7933e7b62eb5ee39
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/495b4fc0d7c65f76b03108199085df4fca98618c
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/f4922c046607c45d76e2911aa8f133d0ad4f9223
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/bf9ecc62100032ede9d981529ff5943c07315509
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/887e462fbc4840bf9b97f101f15c6015b461f11f
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/4a7ef1e94fbfaf4ed2506183b3ef35f2ff458a62
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/b1367915672ea51c99b21ac764a8452d0529a5ea
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/d17fdb8521576f90191c077806b7f470f6a37be0
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/eba8deb7f92f473a40a8e277203d86aeab879bd1
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/2e22ac85d52b2fe68949f7af4e27331e6714309c
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/895f765aa8cc5a9dd2901be65bcd638b8aa7c577
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/c4f81c020aa08458cbad8b21509913a48c91926a
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/45daec660b6288748f4bec6410765829eed926c2
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/04853a3b8c17712cc7f74c3c405ef47af53151c1
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/ae81d9bdd1e378598cf805c84af4313f8e10b3ed
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/2a871da666afd3a5312e061b7933e7b62eb5ee39
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/495b4fc0d7c65f76b03108199085df4fca98618c
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/f4922c046607c45d76e2911aa8f133d0ad4f9223
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/bf9ecc62100032ede9d981529ff5943c07315509
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/887e462fbc4840bf9b97f101f15c6015b461f11f
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/4a7ef1e94fbfaf4ed2506183b3ef35f2ff458a62
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/b1367915672ea51c99b21ac764a8452d0529a5ea
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/d17fdb8521576f90191c077806b7f470f6a37be0
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/eba8deb7f92f473a40a8e277203d86aeab879bd1
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/2e22ac85d52b2fe68949f7af4e27331e6714309c
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/895f765aa8cc5a9dd2901be65bcd638b8aa7c577
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/c4f81c020aa08458cbad8b21509913a48c91926a
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/45daec660b6288748f4bec6410765829eed926c2
 	eapply "${FILESDIR}"/${PN}-41_alpha-daemon-provide-more-flexibility-for-configuring-display-server.patch
 	eapply "${FILESDIR}"/${PN}-41_alpha-libgdm-sort-session-list.patch
 	eapply "${FILESDIR}"/${PN}-41_alpha-worker-dont-load-user-settings-for-program-sessions.patch
@@ -159,35 +159,35 @@ src_prepare() {
 	eapply "${FILESDIR}"/${PN}-42.0-common-reload-settings-when-graphics-initialize.patch
 
 	# From GNOME (fix VT switching):
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/304d25de77d89740f12b31f251ac771a54f8dc55
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/304d25de77d89740f12b31f251ac771a54f8dc55
 	eapply "${FILESDIR}"/${PN}-41_rc-session-worker-set-session-vt-0-out-of-pam-uninitialization.patch
 
 	# From GNOME (update PAM files):
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/bd1594deb1ab99378e8a488a5ecbb515ba215ab9
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/be8d893ab1ad78e7e72068145c5481f82462267e
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/7661ffceaa8e0e19d129d5376546438af56f7750
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/bd1594deb1ab99378e8a488a5ecbb515ba215ab9
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/be8d893ab1ad78e7e72068145c5481f82462267e
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/7661ffceaa8e0e19d129d5376546438af56f7750
 	eapply "${FILESDIR}"/${PN}-41.3-pam-drop-gdm-pin-service.patch
 	eapply "${FILESDIR}"/${PN}-42.0-pam-exherbo-update-to-reflect-pam-changes.patch
 	eapply "${FILESDIR}"/${PN}-42.0-pam-exherbo-update-gdm-launch-environment.patch
 
 	# From GNOME (stop listening for events after UDEV is settled):
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/f0f527ff3815caa091be24168824f74853c0c050
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/307c683f00e1711973139837992ca0f6f55314a5
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/f0f527ff3815caa091be24168824f74853c0c050
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/307c683f00e1711973139837992ca0f6f55314a5
 	eapply "${FILESDIR}"/${PN}-43.0-local-display-factory-fix-type-of-signal-connection-id.patch
 	eapply "${FILESDIR}"/${PN}-43.0-local-display-factory-stop-listening-to-udev-events-when-necessary.patch
 
 	# From GNOME (cache remote users):
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/cf4664891ede9648d096569900e8b95abd91a633
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/cf4664891ede9648d096569900e8b95abd91a633
 	eapply "${FILESDIR}"/${PN}-43.0-session-settings-explicitly-cache-remote-users.patch
 
 	# From GNOME (fix supported session types):
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/6247ca134fb84a609915dfc627c8b3330a681cb5
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/6247ca134fb84a609915dfc627c8b3330a681cb5
 	eapply "${FILESDIR}"/${PN}-43.0-local-display-factory-fix-typo-in-supported-session-types.patch
 
 	# From GNOME (plug memory leaks):
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/a95d9169a1ce0f0c280da4152269551651ea902b
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/8edb5c4aef9bfa3a1d12a496c289644d330d3407
-	# 	https://gitlab.gnome.org/GNOME/gdm/commit/75ac44ec86af05bf01be3420cc733c3dfcb5cd18
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/a95d9169a1ce0f0c280da4152269551651ea902b
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/8edb5c4aef9bfa3a1d12a496c289644d330d3407
+	# 	https://gitlab.gnome.org/GNOME/gdm/-/commit/75ac44ec86af05bf01be3420cc733c3dfcb5cd18
 	eapply "${FILESDIR}"/${PN}-43.1-gdm-display-plug-a-memory-leak.patch
 	eapply "${FILESDIR}"/${PN}-43.1-gdm-session-worker-plug-a-memory-leak.patch
 	eapply "${FILESDIR}"/${PN}-43.1-gdm-local-display-factory-plug-a-memory-leak.patch
